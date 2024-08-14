@@ -98,7 +98,7 @@ nav ul li a {
     border-radius: 600px;
 }
 
-nav ul li .parceiro {
+nav ul li  .parceiro {
 
     background-color: #da5f5f;
 }
@@ -107,7 +107,6 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Estilos do Banner */
 .banner {
     background-image: url('/imagens/psItalia.png');
     background-size: cover;
@@ -116,86 +115,78 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     padding: 0 4rem;
-    position: relative;
-    /* Define o contexto para o posicionamento absoluto */
+    position: relative; /* Define o contexto para o posicionamento absoluto */
     justify-content: flex-start;
     overflow: hidden;
-    text-align: left;
-    /* Garantir que o texto se alinhe à esquerda no banner */
 }
 
-/* Estilo do Nome da Empresa */
 .company-name {
     font-size: 3.5rem;
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-align: left;
     color: white;
 }
 
-/* Estilo do Texto do Banner */
 .banner-text {
     font-size: 1rem;
     max-width: 500px;
     margin: 0;
     line-height: 1.5;
     color: #ffffff;
+    text-align: left;
+    line-height: 60px;
 }
 
-/* Estilo do Botão de Contato */
+
 .contato-buttom {
-    margin-top: 70px;
+    margin-top: 70px; 
+  
+
 }
 
-/* Estilo do Link dentro do Botão de Contato */
 .contato-buttom a {
     display: inline-block;
-    background-color: #70c07c;
-    color: #000000;
-    padding: 0.75rem 1.5rem;
-    border-radius: 40px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
-    /* Sombra do botão */
-    text-decoration: none;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    /* Transição suave para cor de fundo e sombra */
+    background-color: #70c07c; 
+    color: #000000; 
+    padding: 0.75rem 1.5rem; 
+     
+    border-radius: 40px; 
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10); /* Sombra do botão */
+    text-decoration: none; 
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para cor de fundo e sombra */
 }
 
 .contato-buttom a:hover {
-    background-color: #c8f1f3;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+    background-color: #c8f1f3; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3); 
 }
 
-/* Estilo do Parágrafo dentro do Botão de Contato */
 .contato-buttom p {
-    margin: 0;
-    font-size: 1rem;
+    margin: 0; 
+    font-size: 1rem; 
 }
 
-/* Estilo do Card dentro do Banner */
-.banner .info-card {
-    position: absolute;
-    /* Posiciona o card absolutamente dentro do banner */
-    right: 0;
-    /* Posiciona o card na borda direita do banner */
-    top: 340px;
-    /* Margem superior do card */
-    margin-right: 2rem;
-    /* Margem à direita do card */
-    width: 300px;
-    /* Largura máxima do card */
-}
 
+.banner .info-card{
+    align-items: right;
+}
 .info-card {
     background: #fff;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+    max-width: 300px;
+    width: 400px;
     text-align: center;
     color: black;
     border-radius: 60px;
+    position: absolute; /* Posiciona o card absolutamente dentro do banner */
+    right: 0; /* Posiciona o card na borda direita do banner */
+    top: 340px; /* margem top*/
+    right: 300px; /*margem direita */
 }
 
-/* Estilo da Foto do Card */
 .card-photo {
     width: 100px;
     height: 100px;
@@ -204,67 +195,19 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
-/* Estilo do Título dentro do Card */
 .info-card h3 {
     margin: 0.5rem 0;
     font-size: 1.25rem;
 }
 
-/* Estilo do Texto dentro do Card */
 .info-card p {
     margin: 0.5rem 0;
     font-size: 1rem;
 }
 
-/* Estilo do Ícone no Banner */
 .iconBanner {
     color: #00a43c;
     font-size: 30px;
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 768px) {
-    .banner {
-        flex-direction: column;
-
-        align-items: center;
-
-        padding: 1rem;
-
-        height: auto;
-    }
-
-    .company-name {
-        font-size: 2.5rem;
-        /* Reduz o tamanho da fonte */
-        text-align: center;
-        /* Centraliza o texto */
-    }
-
-    .banner-text {
-        font-size: 0.875rem;
-        /* Reduz o tamanho da fonte */
-        max-width: 100%;
-        /* Ajusta a largura máxima */
-        line-height: 1.2;
-        /* Ajusta a altura da linha */
-        text-align: center;
-        /* Centraliza o texto */
-    }
-
-    .contato-buttom {
-        margin-top: 1rem;
-        /* Ajusta a margem superior */
-    }
-
-    .info-card {
-        position: relative;
-        /* Remove o posicionamento absoluto */
-        margin: 1rem 0;
-        /* Ajusta a margem */
-        width: 100%;
-        /* Ajusta a largura para ocupar o espaço disponível */
-    }
 }
 
 /* Estilos da Seção Sobre Nós */

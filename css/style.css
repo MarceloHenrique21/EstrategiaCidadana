@@ -1,0 +1,681 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos do Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    /* Cor de fundo branca */
+    color: #000000;
+    /* Cor do texto preta */
+    padding: 1rem 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+/* Menu "Hamburger" */
+.menu-toggle {
+    display: none;
+    /* Inicialmente escondido em telas grandes */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 2px;
+    background: #000;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+/* Menu de Navegação */
+.nav-menu {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    /* Mantém o texto escuro para contraste com o fundo branco */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #660202;
+}
+
+.banner {
+    background-image: url('/imagens/psItalia.png');
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    position: relative;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não ultrapasse os limites do banner */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0);
+    /* Cor branca com 70% de opacidade para uma camada quase opaca */
+    z-index: 1;
+    /* Faz a sobreposição estar acima da imagem, mas abaixo do conteúdo */
+}
+
+.banner>* {
+    position: relative;
+    z-index: 2;
+    /* Faz com que o conteúdo fique acima da camada de sobreposição */
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    color: #000000;
+}
+
+.company-name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-align: left;
+    margin-left: 350px;
+}
+
+.banner-text {
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0;
+    line-height: 1.5;
+    color: #000000;
+    text-align: left;
+    margin-left: 350px;
+}
+
+/* Estilos da Seção Sobre Nós */
+.sobre-nos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    background-color: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
+}
+
+.sobre-nos .foto-colaboradores {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.sobre-nos .foto-colaboradores img {
+    width: 70%;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.sobre-nos .texto-sobre-nos {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+    margin-right: 400px;
+}
+
+.sobre-nos h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.sobre-nos p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Estilos da Seção de Tópicos */
+.topicos {
+    padding: 2rem;
+    background-image: url('/imagens/imagemTopicos.jpg');
+    /* Substitua pelo caminho correto da imagem */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a área da seção */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem */
+    color: #fff;
+    /* Define a cor do texto para branco para melhor contraste */
+    text-align: center;
+    height: 700px;
+}
+
+.topicos h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.topicos .topicos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.topicos .topico {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 1rem;
+    margin-top: 150px;
+}
+
+.topicos .topico i {
+    font-size: 2rem;
+    color: #000000;
+    margin-right: 1rem;
+}
+
+.topicos .topico p {
+    margin: 0;
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Estilos da Seção Colaboradores */
+.colaboradores {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    margin: 2rem 0;
+}
+
+.logo-container {
+    margin-top: 100px;
+}
+
+.colaboradores h2 {
+    color: #000000;
+    margin-bottom: 1rem;
+    /* Espaço entre o título e a logo */
+    margin-top: 10px;
+}
+
+.colaboradores .logo-empresa {
+    max-width: 200px;
+    /* Ajuste o tamanho máximo da logo conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin-bottom: 2rem;
+    /* Espaço entre a logo e os colaboradores */
+}
+
+.colaboradores .colaborador {
+    display: inline-block;
+    width: 22%;
+    margin: 1rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(229, 1, 1, 0.1);
+}
+
+.colaboradores .colaborador img {
+    width: 150px;
+    height: 150px;
+    border-radius: 40%;
+}
+
+.colaboradores .whatsapp-icon {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    color: #00a43c;
+}
+
+/* Ajustes para garantir que a seção de relatos não seja afetada */
+.relatos {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem 0;
+    height: auto;
+}
+
+.relatos h2 {
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.relatos .relatos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 50px;
+}
+
+.relatos .relato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.relatos .relato img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.relatos .relato .texto-relato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.relatos .relato p {
+    margin: 0.25rem 0;
+    overflow: visible;
+    text-overflow: clip;
+    display: block;
+}
+
+/* Estilos da Seção Contato */
+.contato {
+    padding: 2rem;
+    background-image: url('/imagens/passaporte.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+    color: #fff;
+}
+
+.contato h2 {
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Estilo do formulário */
+.formulario {
+    flex: 1;
+    max-width: 700px;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-top: 100px;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.contato input:focus,
+.contato textarea:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+
+.contato input:not(:focus),
+.contato textarea:not(:focus) {
+    border-color: #000000;
+    /* Adiciona a borda preta quando não está em foco */
+}
+
+.contato input::placeholder,
+.contato textarea::placeholder {
+    color: #000000;
+}
+
+.contato button {
+    background-color: #1b661b;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #000000;
+}
+
+/* Estilos das Informações da Loja */
+.informacoes-loja {
+    color: rgb(0, 0, 0);
+}
+
+.informacoes-loja h3 {
+    margin-bottom: 1rem;
+}
+
+/* Estilos para os ícones de contato */
+.info-item {
+    display: flex;
+    align-items: left;
+    color: #000000;
+    padding: 0px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Estilos do Footer */
+footer {
+    color: #000000;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    /* Adiciona cor de fundo ao footer */
+}
+
+footer .footer-content {
+    text-align: center;
+}
+
+footer .footer-content .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer .footer-content .social-media a {
+    color: #000000;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+footer .footer-content .social-media a:hover {
+    color: #d80000;
+}
+
+footer .footer-content .contact-info {
+    margin-top: 1rem;
+}
+
+footer .footer-content .contact-info p {
+    margin: 0.5rem 0;
+}
+
+/* Estilo para campos de input e textarea com foco e desfoco */
+input:focus,
+textarea:focus {
+    border-color: #ff0000;
+}
+
+input:not(:focus),
+textarea:not(:focus) {
+    border-color: #000000;
+}
+
+/* Estilo do botão flutuante do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-button i {
+    margin: 0;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* Mostra o menu-toggle em telas pequenas */
+    }
+
+    .nav-menu {
+        display: none;
+        /* Oculta o menu-nav por padrão em telas pequenas */
+    }
+
+    .nav-menu.show {
+        display: flex;
+        /* Mostra o menu-nav quando a classe 'show' está adicionada */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 80px;
+        /* Posiciona o menu abaixo do cabeçalho */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .banner {
+        height: 50vh;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .banner-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .company-name {
+        font-size: 2.5rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .banner-text {
+        font-size: 0.875rem;
+        margin-left: 0;
+    }
+
+    .sobre-nos {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .sobre-nos .foto-colaboradores {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .sobre-nos .foto-colaboradores img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sobre-nos .texto-sobre-nos {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .topicos {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .topicos .topico {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .colaboradores {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .colaboradores .colaborador {
+        width: 100%;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    .relatos {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .relatos .relato {
+        width: 100%;
+        height: auto;
+    }
+
+    .contato {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .formulario {
+        max-width: 100%;
+    }
+}

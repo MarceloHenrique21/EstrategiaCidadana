@@ -92,12 +92,19 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #000000;
-    /* Mantém o texto escuro para contraste com o fundo branco */
     font-weight: bold;
+    background-color: #5fb479;
+    border: 15px solid transparent;
+    border-radius: 600px;
+}
+
+nav ul li  .parceiro {
+
+    background-color: #da5f5f;
 }
 
 nav ul li a:hover {
-    color: #660202;
+    color: #ffffff;
 }
 
 .banner {
@@ -131,6 +138,7 @@ nav ul li a:hover {
     text-align: left;
     line-height: 60px;
 }
+
 
 .banner .info-card{
     align-items: right;
@@ -547,13 +555,13 @@ textarea:not(:focus) {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 100 100px 800px rgba(1, 250, 113, 0.2);
     text-decoration: none;
     font-size: 2rem;
 }
 
 .whatsapp-button:hover {
-    background-color: #128c7e;
+    background-color: #000000;
 }
 
 .whatsapp-button i {

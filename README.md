@@ -7,7 +7,6 @@ Site para a empresa Estrategia cidadania
 - deixar o banner inicial responsivo 
 - resolver o bug visual de espaçamento que existe nos topicos 
 - ajustar a logo (tirar as bordas)
-- dar destaque para as opções do menu (destaque permanete para parcerias)
 - fazer o forms de parcerias {
     - nome da empresa/cargo
     - motivo do contato de parceria

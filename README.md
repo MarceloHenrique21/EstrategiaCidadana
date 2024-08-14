@@ -15,3 +15,4 @@ Site para a empresa Estrategia cidadania
 }
 - fazer a section de parcerias 
 - bandeirinhas de cada nacionalidade no banner 
+- colocar o nome da empresa na frente da logo

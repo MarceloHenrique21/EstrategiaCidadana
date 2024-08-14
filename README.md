@@ -14,3 +14,4 @@ Site para a empresa Estrategia cidadania
     - email
 }
 - fazer a section de parcerias 
+- bandeirinhas de cada nacionalidade no banner 

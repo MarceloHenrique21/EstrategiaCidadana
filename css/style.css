@@ -140,6 +140,35 @@ nav ul li a:hover {
 }
 
 
+.contato-buttom {
+    margin-top: 70px; 
+  
+
+}
+
+.contato-buttom a {
+    display: inline-block;
+    background-color: #70c07c; 
+    color: #000000; 
+    padding: 0.75rem 1.5rem; 
+     
+    border-radius: 40px; 
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10); /* Sombra do botão */
+    text-decoration: none; 
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para cor de fundo e sombra */
+}
+
+.contato-buttom a:hover {
+    background-color: #c8f1f3; 
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3); 
+}
+
+.contato-buttom p {
+    margin: 0; 
+    font-size: 1rem; 
+}
+
+
 .banner .info-card{
     align-items: right;
 }

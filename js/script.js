@@ -3,23 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inicializa o EmailJS
     emailjs.init("TnPBahfEveN7UqBji"); // Substitua YOUR_PUBLIC_KEY pela sua chave pública do EmailJS
 
-    // Manipula a cor de fundo do header
-    const header = document.querySelector('header');
     const banner = document.querySelector('.banner');
     const bannerHeight = banner ? banner.offsetHeight : 0; // Verifica se o banner existe e obtém a sua altura
-
-    function updateHeader() {
-        if (window.scrollY < bannerHeight) {
-            header.style.backgroundColor = 'transparent'; // Fundo transparente no topo
-        } else {
-            header.style.backgroundColor = '#FFFFFF'; // Fundo branco quando rolado para baixo
-        }
-    }
-
-    window.addEventListener('scroll', updateHeader);
-
-    // Inicializa a cor do cabeçalho
-    updateHeader();
 
     // Manipula a borda
     document.querySelectorAll('input, textarea').forEach(element => {

@@ -108,43 +108,18 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     padding: 0 4rem;
-    position: relative;
+    position: relative; /* Define o contexto para o posicionamento absoluto */
     justify-content: flex-start;
     overflow: hidden;
-    /* Garante que o pseudo-elemento não ultrapasse os limites do banner */
-}
-
-.banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.0);
-    /* Cor branca com 70% de opacidade para uma camada quase opaca */
-    z-index: 1;
-    /* Faz a sobreposição estar acima da imagem, mas abaixo do conteúdo */
-}
-
-.banner>* {
-    position: relative;
-    z-index: 2;
-    /* Faz com que o conteúdo fique acima da camada de sobreposição */
-}
-
-.banner-content {
-    position: relative;
-    z-index: 2;
-    color: #000000;
 }
 
 .company-name {
     font-size: 3.5rem;
     font-weight: bold;
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: left;
-    margin-left: 350px;
+    color: white;
 }
 
 .banner-text {
@@ -152,9 +127,50 @@ nav ul li a:hover {
     max-width: 500px;
     margin: 0;
     line-height: 1.5;
-    color: #000000;
+    color: #ffffff;
     text-align: left;
-    margin-left: 350px;
+    line-height: 60px;
+}
+
+.banner .info-card{
+    align-items: right;
+}
+.info-card {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+    max-width: 300px;
+    width: 400px;
+    text-align: center;
+    color: black;
+    border-radius: 60px;
+    position: absolute; /* Posiciona o card absolutamente dentro do banner */
+    right: 0; /* Posiciona o card na borda direita do banner */
+    top: 340px; /* margem top*/
+    right: 300px; /*margem direita */
+}
+
+.card-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.info-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.iconBanner {
+    color: #00a43c;
+    font-size: 30px;
 }
 
 /* Estilos da Seção Sobre Nós */

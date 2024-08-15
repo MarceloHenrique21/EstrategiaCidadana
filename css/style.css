@@ -94,11 +94,11 @@ nav ul li a {
     color: #000000;
     font-weight: bold;
     background-color: #5fb479;
-    border: 15px solid transparent;
+    border: 10px solid transparent;
     border-radius: 600px;
 }
 
-nav ul li  .parceiro {
+nav ul li .parceiro {
 
     background-color: #da5f5f;
 }
@@ -111,13 +111,32 @@ nav ul li a:hover {
     background-image: url('/imagens/psItalia.png');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 80px); /* Ajusta a altura do banner */
     display: flex;
     align-items: center;
-    padding: 0 4rem;
-    position: relative; /* Define o contexto para o posicionamento absoluto */
-    justify-content: flex-start;
+   
+    padding: 0 2rem;
+    position: relative;
     overflow: hidden;
+}
+
+/* Em telas pequenas, apenas a imagem de fundo deve ser visível */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+        /* Ajusta a altura do banner em telas pequenas */
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .company-name,
+    .banner-text,
+    .contato-buttom,
+    .info-card {
+        display: none;
+        /* Esconde o conteúdo do banner */
+    }
 }
 
 .company-name {
@@ -139,39 +158,62 @@ nav ul li a:hover {
     line-height: 60px;
 }
 
-
 .contato-buttom {
-    margin-top: 70px; 
-  
+    margin-top: 70px;
+
 
 }
 
 .contato-buttom a {
     display: inline-block;
-    background-color: #70c07c; 
-    color: #000000; 
-    padding: 0.75rem 1.5rem; 
-     
-    border-radius: 40px; 
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10); /* Sombra do botão */
-    text-decoration: none; 
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para cor de fundo e sombra */
+    /* Faz o botão se ajustar ao conteúdo */
+    background-color: #70c07c;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    padding: 0.75rem 1.5rem;
+    /* Espaçamento interno do botão */
+    border-radius: 25px;
+    /* Cantos arredondados */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    font-weight: bold;
+    /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transição suave para cor e transformação */
 }
 
 .contato-buttom a:hover {
-    background-color: #c8f1f3; 
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3); 
+    background-color: #5fb479;
+    /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento no botão ao passar o mouse */
 }
 
 .contato-buttom p {
-    margin: 0; 
-    font-size: 1rem; 
+    margin: 0;
+    font-size: 1rem;
 }
 
 
-.banner .info-card{
-    align-items: right;
+.banner .info-card {
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    border-radius: 8px;
+    position: absolute;
+    /* Posiciona o card absolutamente dentro do banner */
+    right: 2rem;
+    /* Posiciona o card a partir da borda direita do banner */
+    top: 50%;
+    /* Posiciona o card verticalmente no centro */
+    transform: translateY(-50%);
 }
+
 .info-card {
     background: #fff;
     padding: 1rem;
@@ -181,10 +223,14 @@ nav ul li a:hover {
     text-align: center;
     color: black;
     border-radius: 60px;
-    position: absolute; /* Posiciona o card absolutamente dentro do banner */
-    right: 0; /* Posiciona o card na borda direita do banner */
-    top: 340px; /* margem top*/
-    right: 300px; /*margem direita */
+    position: absolute;
+    /* Posiciona o card absolutamente dentro do banner */
+    right: 0;
+    /* Posiciona o card na borda direita do banner */
+    top: 340px;
+    /* margem top*/
+    right: 300px;
+    /*margem direita */
 }
 
 .card-photo {
@@ -241,7 +287,34 @@ nav ul li a:hover {
     flex: 1;
     text-align: left;
     max-width: 600px;
-    margin-right: 400px;
+    margin-right: auto;
+    /* Alinha o conteúdo da div à esquerda e pode ser ajustado conforme necessário */
+    margin-left: auto;
+    /* Centraliza o bloco de texto horizontalmente se o container permitir */
+    padding: 20px;
+    /* Adiciona um espaçamento interno, se desejado */
+    box-sizing: border-box;
+    /* Inclui padding e borda no cálculo da largura total */
+}
+
+.texto-sobre-nos {
+    max-width: 600px;
+    /* Limita a largura máxima para uma melhor legibilidade */
+    margin: 0 auto;
+    /* Centraliza o contêiner horizontalmente */
+    padding: 20px;
+    /* Adiciona espaçamento interno */
+    text-align: justify;
+    /* Justifica o texto para alinhamento uniforme nas bordas */
+    line-height: 1.6;
+    /* Ajusta a altura da linha para melhor legibilidade */
+}
+
+.texto-sobre-nos p {
+    margin-bottom: 1em;
+    /* Adiciona espaço abaixo de cada parágrafo */
+    text-align: justify;
+    /* Justifica o texto para alinhamento uniforme */
 }
 
 .sobre-nos h2 {
@@ -250,10 +323,7 @@ nav ul li a:hover {
     color: black;
 }
 
-.sobre-nos p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
+
 
 /* Estilos da Seção de Tópicos */
 .topicos {
@@ -269,7 +339,8 @@ nav ul li a:hover {
     color: #fff;
     /* Define a cor do texto para branco para melhor contraste */
     text-align: center;
-    height: 700px;
+    height: auto;
+    /* Ajusta a altura para se adaptar ao conteúdo */
 }
 
 .topicos h2 {
@@ -281,7 +352,9 @@ nav ul li a:hover {
 .topicos .topicos-list {
     display: flex;
     flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linha seguinte quando necessário */
     justify-content: center;
+
     gap: 1rem;
 }
 
@@ -294,7 +367,7 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin-bottom: 1rem;
-    margin-top: 150px;
+    /* Remove a margem superior fixa para evitar problemas de posicionamento */
 }
 
 .topicos .topico i {
@@ -307,6 +380,19 @@ nav ul li a:hover {
     margin: 0;
     font-size: 1rem;
     color: #000000;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .topicos {
+        padding: 1rem;
+    }
+
+    .topicos .topico {
+        width: 100%;
+        /* Ajusta a largura dos tópicos para 100% em telas pequenas */
+        margin-top: 1rem;
+    }
 }
 
 /* Estilos da Seção Colaboradores */
@@ -590,7 +676,10 @@ textarea:not(:focus) {
 }
 
 .whatsapp-button:hover {
-    background-color: #000000;
+    background-color: #5fb479;
+    /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento no botão ao passar o mouse */
 }
 
 .whatsapp-button i {
@@ -731,4 +820,101 @@ textarea:not(:focus) {
     .formulario {
         max-width: 100%;
     }
+}
+
+/* Estilos da Seção de Parceria */
+.parceria {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    /* Cor de fundo clara para destacar o conteúdo */
+    text-align: center;
+    margin: 2rem 0;
+    /* Espaço acima e abaixo da seção */
+}
+
+.parceria-container {
+    max-width: 800px;
+    /* Largura máxima para manter o conteúdo centralizado e legível */
+    margin: 0 auto;
+    /* Centraliza o container horizontalmente */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alinha todos os itens à esquerda */
+    position: relative;
+    /* Mantém o posicionamento relativo */
+}
+
+.parceiro-titulo {
+    font-size: 2rem;
+    /* Tamanho da fonte do título */
+    margin-bottom: 1rem;
+    /* Espaço abaixo do título */
+    color: #333;
+    /* Cor do texto do título */
+    font-weight: bold;
+    /* Título em negrito */
+    text-align: left;
+    /* Alinhar o título à esquerda */
+}
+
+.parceria-topicos {
+    text-align: left;
+    /* Alinhar o texto à esquerda dentro da lista */
+    margin-bottom: 1.5rem;
+    /* Espaço abaixo dos tópicos */
+}
+
+.parceria-topicos ul {
+    list-style-type: disc;
+    /* Adiciona marcadores padrão */
+    padding-left: 2rem;
+    /* Espaço interno à esquerda da lista para os marcadores */
+    margin: 0;
+    /* Remove a margem padrão */
+}
+
+.parceria-topicos ul li {
+    font-size: 1.2rem;
+    /* Tamanho da fonte dos itens da lista */
+    margin-bottom: 0.5rem;
+    /* Espaço abaixo de cada item da lista */
+    color: #555;
+    /* Cor do texto dos itens da lista */
+    line-height: 1.5;
+    /* Altura da linha para melhor legibilidade */
+}
+
+.parceria-botao {
+    margin-top: 1rem;
+    /* Espaço acima do botão */
+    align-self: flex-end;
+    /* Alinha o botão à direita */
+}
+
+.botao-parceria {
+    display: inline-block;
+    /* Faz o botão se ajustar ao conteúdo */
+    background-color: #70c07c;
+    /* Cor de fundo do botão */
+    color: #fff;
+    /* Cor do texto do botão */
+    padding: 0.75rem 1.5rem;
+    /* Espaçamento interno do botão */
+    border-radius: 25px;
+    /* Cantos arredondados */
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+    font-weight: bold;
+    /* Texto em negrito */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Transição suave para cor e transformação */
+}
+
+.botao-parceria:hover {
+    background-color: #5fb479;
+    /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05);
+    /* Leve aumento no botão ao passar o mouse */
 }

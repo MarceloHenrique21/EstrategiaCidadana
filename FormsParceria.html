@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Parcerias</title>
-    <link rel="stylesheet" href="/css/forms.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Formulário de Parcerias</h1>
-        <form action="#" method="post" class="partnership-form">
-            <label for="company-name">Nome da Empresa/Cargo</label>
-            <input type="text" id="company-name" name="company-name" required>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário de Parcerias</title>
+        <link rel="stylesheet" href="/css/forms.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Formulário de Parcerias</h1>
+            <form action="#" method="post" class="partnership-form">
 
-            <label for="reason">Motivo do Contato de Parceria</label>
-            <textarea id="reason" name="reason" rows="4" required></textarea>
+                <input type="text" id="company-name" name="company-name"
+                    placeholder="Nome da sua empresa ou cargo" required>
 
-            <label for="phone">Telefone</label>
-            <input type="tel" id="phone" name="phone" required>
+                <textarea id="reason" name="reason" rows="4"
+                    placeholder="Motivo do contato para parceria"
+                    required></textarea>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Telefone"
+                    required>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
-</body>
+                <input type="email" id="email" name="email" placeholder="E-mail"
+                    required>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
 </html>

@@ -84,7 +84,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
     background-color: #5fb479;
     border: 10px solid transparent;
@@ -92,11 +92,11 @@ nav ul li a {
 }
 
 nav ul li .parceiro {
-    background-color: #da5f5f;
+    background-color: #F2B700;
 }
 
 nav ul li a:hover {
-    background-color: #9f0e0e;
+    background-color: #000000;
     transform: scale(1.05);
 }
 
@@ -104,10 +104,9 @@ nav ul li a:hover {
     background-image: url('/imagens/psItalia.png');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 80px);
+    height: 900px;
     display: flex;
     align-items: center;
-
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
@@ -136,6 +135,31 @@ nav ul li a:hover {
     margin-bottom: 1rem;
     text-align: left;
     color: white;
+    font-family: 'Courier New', monospace;
+}
+
+
+.flags {
+    display: flex;
+    flex-direction: column;
+}
+
+.flag-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.flag-item img {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.flag-item h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
 .banner-text {
@@ -146,17 +170,16 @@ nav ul li a:hover {
     color: #ffffff;
     text-align: left;
     line-height: 60px;
+    font-family: 'Courier New', monospace;
 }
 
 .contato-buttom {
     margin-top: 70px;
-
-
 }
 
 .contato-buttom a {
     display: inline-block;
-    background-color: #70c07c;
+    background-color: #F2B700;
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
@@ -166,7 +189,7 @@ nav ul li a:hover {
 }
 
 .contato-buttom a:hover {
-    background-color: #5fb479;
+    background-color: #000000;
     transform: scale(1.05);
 }
 
@@ -175,43 +198,26 @@ nav ul li a:hover {
     font-size: 1rem;
 }
 
-
-.banner .info-card {
-    background: #fff;
+.info-card {
+    background: #ffffff;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
     max-width: 300px;
     width: 100%;
     text-align: center;
-    color: black;
-    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    border-radius: 1000px;
     position: absolute;
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.info-card {
-    background: #fff;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
-    max-width: 300px;
-    width: 400px;
-    text-align: center;
-    color: black;
-    border-radius: 60px;
-    position: absolute;
-    right: 0;
-    top: 340px;
-    right: 300px;
-}
-
 .card-photo {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    border-radius: 100px;
 }
 
 .info-card h3 {
@@ -229,6 +235,7 @@ nav ul li a:hover {
     font-size: 30px;
 }
 
+
 .sobre-nos {
     display: flex;
     align-items: center;
@@ -240,7 +247,7 @@ nav ul li a:hover {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 700px;
+    height: 900px;
 }
 
 .sobre-nos .foto-colaboradores {
@@ -287,13 +294,12 @@ nav ul li a:hover {
 
 .topicos {
     padding: 10rem;
-    background-image: url('/imagens/imagemTopicos.jpg');
+    background-image: url('/imagens/EspanhaPaisagem.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: #ffffff;
     text-align: center;
-    height: 700px;
+    height: 900px;
     align-content: center;
 }
 
@@ -313,12 +319,13 @@ nav ul li a:hover {
 .topicos .topico {
     display: flex;
     align-items: center;
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 8px;
+    background-color: #f6e5b1;
+    padding: 15px;
+    border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin-bottom: 1rem;
+    
 }
 
 .topicos .topico i {
@@ -349,6 +356,7 @@ nav ul li a:hover {
     padding: 2rem;
     background-color: #ffffff;
     margin: 2rem 0;
+    height: 900px;
 }
 
 .logo-container {
@@ -394,7 +402,7 @@ nav ul li a:hover {
     padding: 2rem;
     background-color: #fff;
     margin: 2rem 0;
-    height: auto;
+    height: 900px;
 }
 
 .relatos h2 {
@@ -450,7 +458,7 @@ nav ul li a:hover {
 
 .contato {
     padding: 2rem;
-    background-image: url('/imagens/passaporte.jpg');
+    background-image: url('/imagens/fotoPassaporte.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -510,8 +518,8 @@ nav ul li a:hover {
 }
 
 .contato button {
-    background-color: #1b661b;
-    color: #fff;
+    background-color: #F2B700;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 10px;
@@ -520,6 +528,7 @@ nav ul li a:hover {
 
 .contato button:hover {
     background-color: #000000;
+    transform: scale(1.05);
 }
 
 .informacoes-loja {
@@ -571,7 +580,7 @@ footer .footer-content .social-media a {
 }
 
 footer .footer-content .social-media a:hover {
-    color: #d80000;
+    color: #F2B700;
 }
 
 footer .footer-content .contact-info {
@@ -584,7 +593,7 @@ footer .footer-content .contact-info p {
 
 input:focus,
 textarea:focus {
-    border-color: #ff0000;
+    border-color: #03390b;
 }
 
 input:not(:focus),
@@ -801,8 +810,8 @@ textarea:not(:focus) {
 
 .botao-parceria {
     display: inline-block;
-    background-color: #70c07c;
-    color: #fff;
+    background-color: #F2B700;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;
@@ -811,6 +820,8 @@ textarea:not(:focus) {
 }
 
 .botao-parceria:hover {
-    background-color: #5fb479;
+    background-color: #000000;
     transform: scale(1.05);
 }
+
+

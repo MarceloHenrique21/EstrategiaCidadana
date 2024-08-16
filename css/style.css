@@ -16,7 +16,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: auto;
+    min-height: 80px;
     background-color: #ffffff;
     color: #000000;
     padding: 1rem 2rem;
@@ -27,13 +28,14 @@ header {
     align-items: center;
     border-radius: 3px;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 header .logo img {
     height: 50px;
 }
 
-/* Menu celular (removido) */
+/* Menu celular */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -69,6 +71,9 @@ header .logo img {
 
 .nav-menu {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
 }
 
 nav ul {
@@ -76,10 +81,12 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav ul li {
-    margin-right: 1.5rem;
+    margin: 0;
 }
 
 nav ul li a {
@@ -89,7 +96,126 @@ nav ul li a {
     background-color: #5fb479;
     border: 10px solid transparent;
     border-radius: 600px;
+    padding: 0.5rem 1rem;
+    display: block;
+    text-align: center;
+    white-space: nowrap;
 }
+
+nav ul li .parceiro {
+    background-color: #F2B700;
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        min-height: 80px;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+nav ul li .parceiro {
+    background-color: #F2B700;
+}
+
+nav ul li a:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 1rem;
+
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+
+    }
+
+    .nav-menu {
+        display: none;
+
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+
+    }
+
+    .nav-menu.active {
+        display: flex;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+
+    }
+
+    nav ul li a {
+        padding: 0.75rem 1.5rem;
+
+    }
+}
+
 
 nav ul li .parceiro {
     background-color: #F2B700;
@@ -151,7 +277,7 @@ nav ul li a:hover {
 }
 
 .flag-item img {
-    width: 50px; 
+    width: 50px;
     height: auto;
     margin-right: 10px;
 }
@@ -235,7 +361,6 @@ nav ul li a:hover {
     font-size: 30px;
 }
 
-
 .sobre-nos {
     display: flex;
     align-items: center;
@@ -247,16 +372,19 @@ nav ul li a:hover {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 900px;
+    height: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .sobre-nos .foto-colaboradores {
     flex: 1;
     margin-right: 2rem;
+    min-width: 300px;
 }
 
 .sobre-nos .foto-colaboradores img {
-    width: 600px;
+    max-width: 100%;
     height: auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -265,16 +393,12 @@ nav ul li a:hover {
 .sobre-nos .texto-sobre-nos {
     flex: 1;
     text-align: left;
-    max-width: auto;
-    margin-right: 300px;
-    margin-left: auto;
     padding: 20px;
     box-sizing: border-box;
-
 }
 
 .texto-sobre-nos {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     text-align: justify;
@@ -292,6 +416,27 @@ nav ul li a:hover {
     color: black;
 }
 
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .sobre-nos {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    .sobre-nos .foto-colaboradores {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+
+    .sobre-nos .texto-sobre-nos {
+        margin-right: 0;
+        max-width: 100%;
+    }
+}
+
 .topicos {
     padding: 10rem;
     background-image: url('/imagens/EspanhaPaisagem.jpg');
@@ -299,7 +444,8 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
-    height: 900px;
+    height: auto; /* Ajusta a altura automaticamente */
+    min-height: 900px; /* Altura mínima para garantir o espaço suficiente */
     align-content: center;
 }
 
@@ -313,7 +459,8 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1rem; /* Espaçamento entre os itens */
+    align-items: flex-start; /* Alinha os itens no topo */
 }
 
 .topicos .topico {
@@ -324,8 +471,9 @@ nav ul li a:hover {
     border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
-    margin-bottom: 1rem;
-    
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    margin: 0 0 1rem 0; /* Remove a margem horizontal */
+    transition: width 0.3s ease; /* Suaviza a transição de largura */
 }
 
 .topicos .topico i {
@@ -340,16 +488,18 @@ nav ul li a:hover {
     color: #000000;
 }
 
+/* Media Queries para telas menores */
 @media (max-width: 768px) {
     .topicos {
-        padding: 1rem;
+        padding: 1rem; /* Ajusta o padding para telas menores */
     }
 
     .topicos .topico {
-        width: 100%;
-        margin-top: 1rem;
+        width: 100%; /* Faz com que os tópicos ocupem a largura total */
+        margin: 0 0 1rem 0; /* Remove a margem horizontal */
     }
 }
+
 
 .colaboradores {
     text-align: center;
@@ -823,5 +973,3 @@ textarea:not(:focus) {
     background-color: #000000;
     transform: scale(1.05);
 }
-
-

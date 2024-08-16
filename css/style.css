@@ -165,24 +165,22 @@ nav ul li a:hover {
 }
 
 
+/* Estilos para telas menores */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-
         height: auto;
-
         padding: 1rem;
-
+        background-color: rgba(255, 255, 255, 0);
+        
     }
 
     .logo {
         margin-bottom: 1rem;
-
     }
 
     .nav-menu {
         display: none;
-
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -190,32 +188,26 @@ nav ul li a:hover {
 
     .menu-toggle {
         display: flex;
-
     }
 
     .nav-menu.active {
         display: flex;
-
     }
 
     nav ul {
         flex-direction: column;
-
         width: 100%;
         padding: 0;
     }
 
     nav ul li {
         margin: 1rem 0;
-
     }
 
     nav ul li a {
         padding: 0.75rem 1.5rem;
-
     }
 }
-
 
 nav ul li .parceiro {
     background-color: #F2B700;
@@ -238,7 +230,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-/* Estilos para dispositivos móveis */
+
 @media (max-width: 768px) {
     .banner {
         height: 50vh;
@@ -247,10 +239,18 @@ nav ul li a:hover {
         justify-content: center;
     }
 
-    .company-name,
     .banner-text,
     .contato-buttom {
         display: none;
+    }
+
+    .company-name {
+        
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: left;
+        color: white;
+        font-family: 'Courier New', monospace;
     }
 
     .info-card {
@@ -266,7 +266,7 @@ nav ul li a:hover {
         background-color: white;
         height: 160px;
         width: 160px;
-        margin-top: 100px;
+        margin-bottom: 30px;
     }
 
     .card-photo {
@@ -427,6 +427,7 @@ nav ul li a:hover {
     height: auto;
     margin-top: 100px;
     margin-bottom: 100px;
+    border-radius: 100000000px;
 }
 
 .sobre-nos .texto-sobre-nos {

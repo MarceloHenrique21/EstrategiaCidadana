@@ -21,7 +21,7 @@ header {
     background-color: #ffffff;
     color: #000000;
     padding: 1rem 2rem;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header {
 }
 
 header .logo img {
-    height: 50px;
+    height: 60px;
 }
 
 /* Menu celular */
@@ -172,7 +172,7 @@ nav ul li a:hover {
         height: auto;
         padding: 1rem;
         background-color: rgba(255, 255, 255, 0);
-        
+
     }
 
     .logo {
@@ -245,7 +245,7 @@ nav ul li a:hover {
     }
 
     .company-name {
-        
+
         font-size: 1rem;
         font-weight: bold;
         text-align: left;
@@ -428,6 +428,7 @@ nav ul li a:hover {
     margin-top: 100px;
     margin-bottom: 100px;
     border-radius: 100000000px;
+    box-shadow: 0 15px 40px black;
 }
 
 .sobre-nos .texto-sobre-nos {
@@ -546,7 +547,7 @@ nav ul li a:hover {
     padding: 2rem;
     background-color: #ffffff;
     margin: 2rem 0;
-    height: 900px;
+    height: 960px;
 }
 
 .logo-container {
@@ -560,19 +561,21 @@ nav ul li a:hover {
 }
 
 .colaboradores .logo-empresa {
-    max-width: 200px;
-    height: auto;
-    margin-bottom: 2rem;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 3rem;
+    box-shadow: 0 15px 40px black;
+    border-radius: 100px;
 }
 
 .colaboradores .colaborador {
     display: inline-block;
     width: 22%;
     margin: 1rem;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(229, 1, 1, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
 }
 
 .colaboradores .colaborador img {
@@ -590,7 +593,7 @@ nav ul li a:hover {
 
 .relatos {
     padding: 2rem;
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 2rem 0;
     height: 900px;
 }
@@ -614,15 +617,14 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0  15px 40px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: auto;
     overflow: hidden;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .relatos .relato img {

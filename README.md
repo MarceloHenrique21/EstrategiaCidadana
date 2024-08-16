@@ -1,5 +1,5 @@
 # EstrategiaCidadana
 Site para a empresa Estrategia cidadania 
 
-- ajustar a logo (tirar as bordas)
-- colocar uma logo com nome na frente
+- editar as imagens 
+- atualizar as informações (chaves, redes sociais, fotos e etc.)

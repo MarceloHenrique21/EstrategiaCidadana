@@ -338,7 +338,7 @@ nav ul li a:hover {
     margin-bottom: 1rem;
     text-align: left;
     color: white;
-    font-family: 'Courier New', monospace;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .flags {
@@ -350,6 +350,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    margin-left: 100px;
 }
 
 .flag-item img {
@@ -372,7 +373,7 @@ nav ul li a:hover {
     color: #ffffff;
     text-align: left;
     line-height: 60px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contato-buttom {
@@ -541,7 +542,6 @@ nav ul li a:hover {
     }
 }
 
-
 .colaboradores {
     text-align: center;
     padding: 2rem;
@@ -620,7 +620,7 @@ nav ul li a:hover {
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0  15px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     width: 300px;
     height: auto;
     overflow: hidden;
@@ -955,7 +955,7 @@ textarea:not(:focus) {
     background-color: #ffffff;
     text-align: center;
     margin: 2rem 0;
-    height: 600px;
+    height: 500px;
 }
 
 .parceria-container {
@@ -966,7 +966,7 @@ textarea:not(:focus) {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 .parceiro-titulo {

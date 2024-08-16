@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos do Body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -13,7 +11,6 @@ body {
     margin: 0;
 }
 
-/* Estilos do Header */
 header {
     position: fixed;
     top: 0;
@@ -21,9 +18,7 @@ header {
     width: 100%;
     height: 80px;
     background-color: #ffffff;
-    /* Cor de fundo branca */
     color: #000000;
-    /* Cor do texto preta */
     padding: 1rem 2rem;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -38,10 +33,9 @@ header .logo img {
     height: 50px;
 }
 
-/* Menu "Hamburger" */
+/* Menu celular (removido) */
 .menu-toggle {
     display: none;
-    /* Inicialmente escondido em telas grandes */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -73,7 +67,6 @@ header .logo img {
     position: relative;
 }
 
-/* Menu de Navegação */
 .nav-menu {
     display: flex;
 }
@@ -99,32 +92,30 @@ nav ul li a {
 }
 
 nav ul li .parceiro {
-
     background-color: #da5f5f;
 }
 
 nav ul li a:hover {
-    color: #ffffff;
+    background-color: #9f0e0e;
+    transform: scale(1.05);
 }
 
 .banner {
     background-image: url('/imagens/psItalia.png');
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 80px); /* Ajusta a altura do banner */
+    height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-   
+
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
 }
 
-/* Em telas pequenas, apenas a imagem de fundo deve ser visível */
 @media (max-width: 768px) {
     .banner {
         height: 50vh;
-        /* Ajusta a altura do banner em telas pequenas */
         padding: 0;
         text-align: center;
         justify-content: center;
@@ -135,7 +126,6 @@ nav ul li a:hover {
     .contato-buttom,
     .info-card {
         display: none;
-        /* Esconde o conteúdo do banner */
     }
 }
 
@@ -166,28 +156,18 @@ nav ul li a:hover {
 
 .contato-buttom a {
     display: inline-block;
-    /* Faz o botão se ajustar ao conteúdo */
     background-color: #70c07c;
-    /* Cor de fundo do botão */
     color: #fff;
-    /* Cor do texto do botão */
     padding: 0.75rem 1.5rem;
-    /* Espaçamento interno do botão */
     border-radius: 25px;
-    /* Cantos arredondados */
     text-decoration: none;
-    /* Remove o sublinhado do link */
     font-weight: bold;
-    /* Texto em negrito */
     transition: background-color 0.3s, transform 0.3s;
-    /* Transição suave para cor e transformação */
 }
 
 .contato-buttom a:hover {
     background-color: #5fb479;
-    /* Cor de fundo ao passar o mouse */
     transform: scale(1.05);
-    /* Leve aumento no botão ao passar o mouse */
 }
 
 .contato-buttom p {
@@ -206,11 +186,8 @@ nav ul li a:hover {
     color: black;
     border-radius: 8px;
     position: absolute;
-    /* Posiciona o card absolutamente dentro do banner */
     right: 2rem;
-    /* Posiciona o card a partir da borda direita do banner */
     top: 50%;
-    /* Posiciona o card verticalmente no centro */
     transform: translateY(-50%);
 }
 
@@ -224,13 +201,9 @@ nav ul li a:hover {
     color: black;
     border-radius: 60px;
     position: absolute;
-    /* Posiciona o card absolutamente dentro do banner */
     right: 0;
-    /* Posiciona o card na borda direita do banner */
     top: 340px;
-    /* margem top*/
     right: 300px;
-    /*margem direita */
 }
 
 .card-photo {
@@ -256,7 +229,6 @@ nav ul li a:hover {
     font-size: 30px;
 }
 
-/* Estilos da Seção Sobre Nós */
 .sobre-nos {
     display: flex;
     align-items: center;
@@ -277,7 +249,7 @@ nav ul li a:hover {
 }
 
 .sobre-nos .foto-colaboradores img {
-    width: 70%;
+    width: 600px;
     height: auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -286,35 +258,25 @@ nav ul li a:hover {
 .sobre-nos .texto-sobre-nos {
     flex: 1;
     text-align: left;
-    max-width: 600px;
-    margin-right: auto;
-    /* Alinha o conteúdo da div à esquerda e pode ser ajustado conforme necessário */
+    max-width: auto;
+    margin-right: 300px;
     margin-left: auto;
-    /* Centraliza o bloco de texto horizontalmente se o container permitir */
     padding: 20px;
-    /* Adiciona um espaçamento interno, se desejado */
     box-sizing: border-box;
-    /* Inclui padding e borda no cálculo da largura total */
+
 }
 
 .texto-sobre-nos {
     max-width: 600px;
-    /* Limita a largura máxima para uma melhor legibilidade */
     margin: 0 auto;
-    /* Centraliza o contêiner horizontalmente */
     padding: 20px;
-    /* Adiciona espaçamento interno */
     text-align: justify;
-    /* Justifica o texto para alinhamento uniforme nas bordas */
     line-height: 1.6;
-    /* Ajusta a altura da linha para melhor legibilidade */
 }
 
 .texto-sobre-nos p {
     margin-bottom: 1em;
-    /* Adiciona espaço abaixo de cada parágrafo */
     text-align: justify;
-    /* Justifica o texto para alinhamento uniforme */
 }
 
 .sobre-nos h2 {
@@ -323,24 +285,16 @@ nav ul li a:hover {
     color: black;
 }
 
-
-
-/* Estilos da Seção de Tópicos */
 .topicos {
-    padding: 2rem;
+    padding: 10rem;
     background-image: url('/imagens/imagemTopicos.jpg');
-    /* Substitua pelo caminho correto da imagem */
     background-size: cover;
-    /* Faz com que a imagem cubra toda a área da seção */
     background-position: center;
-    /* Centraliza a imagem */
     background-repeat: no-repeat;
-    /* Impede a repetição da imagem */
-    color: #fff;
-    /* Define a cor do texto para branco para melhor contraste */
+    color: #ffffff;
     text-align: center;
-    height: auto;
-    /* Ajusta a altura para se adaptar ao conteúdo */
+    height: 700px;
+    align-content: center;
 }
 
 .topicos h2 {
@@ -352,9 +306,7 @@ nav ul li a:hover {
 .topicos .topicos-list {
     display: flex;
     flex-wrap: wrap;
-    /* Permite que os itens quebrem para a linha seguinte quando necessário */
     justify-content: center;
-
     gap: 1rem;
 }
 
@@ -367,7 +319,6 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 300px;
     margin-bottom: 1rem;
-    /* Remove a margem superior fixa para evitar problemas de posicionamento */
 }
 
 .topicos .topico i {
@@ -382,7 +333,6 @@ nav ul li a:hover {
     color: #000000;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     .topicos {
         padding: 1rem;
@@ -390,12 +340,10 @@ nav ul li a:hover {
 
     .topicos .topico {
         width: 100%;
-        /* Ajusta a largura dos tópicos para 100% em telas pequenas */
         margin-top: 1rem;
     }
 }
 
-/* Estilos da Seção Colaboradores */
 .colaboradores {
     text-align: center;
     padding: 2rem;
@@ -410,17 +358,13 @@ nav ul li a:hover {
 .colaboradores h2 {
     color: #000000;
     margin-bottom: 1rem;
-    /* Espaço entre o título e a logo */
     margin-top: 10px;
 }
 
 .colaboradores .logo-empresa {
     max-width: 200px;
-    /* Ajuste o tamanho máximo da logo conforme necessário */
     height: auto;
-    /* Mantém a proporção da imagem */
     margin-bottom: 2rem;
-    /* Espaço entre a logo e os colaboradores */
 }
 
 .colaboradores .colaborador {
@@ -446,7 +390,6 @@ nav ul li a:hover {
     color: #00a43c;
 }
 
-/* Ajustes para garantir que a seção de relatos não seja afetada */
 .relatos {
     padding: 2rem;
     background-color: #fff;
@@ -505,7 +448,6 @@ nav ul li a:hover {
     display: block;
 }
 
-/* Estilos da Seção Contato */
 .contato {
     padding: 2rem;
     background-image: url('/imagens/passaporte.jpg');
@@ -529,7 +471,6 @@ nav ul li a:hover {
     gap: 2rem;
 }
 
-/* Estilo do formulário */
 .formulario {
     flex: 1;
     max-width: 700px;
@@ -561,7 +502,6 @@ nav ul li a:hover {
 .contato input:not(:focus),
 .contato textarea:not(:focus) {
     border-color: #000000;
-    /* Adiciona a borda preta quando não está em foco */
 }
 
 .contato input::placeholder,
@@ -582,7 +522,6 @@ nav ul li a:hover {
     background-color: #000000;
 }
 
-/* Estilos das Informações da Loja */
 .informacoes-loja {
     color: rgb(0, 0, 0);
 }
@@ -591,7 +530,6 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
-/* Estilos para os ícones de contato */
 .info-item {
     display: flex;
     align-items: left;
@@ -609,12 +547,10 @@ nav ul li a:hover {
     font-size: 1rem;
 }
 
-/* Estilos do Footer */
 footer {
     color: #000000;
     padding: 2rem 1rem;
     background-color: #f9f9f9;
-    /* Adiciona cor de fundo ao footer */
 }
 
 footer .footer-content {
@@ -646,7 +582,6 @@ footer .footer-content .contact-info p {
     margin: 0.5rem 0;
 }
 
-/* Estilo para campos de input e textarea com foco e desfoco */
 input:focus,
 textarea:focus {
     border-color: #ff0000;
@@ -657,7 +592,6 @@ textarea:not(:focus) {
     border-color: #000000;
 }
 
-/* Estilo do botão flutuante do WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -677,16 +611,13 @@ textarea:not(:focus) {
 
 .whatsapp-button:hover {
     background-color: #5fb479;
-    /* Cor de fundo ao passar o mouse */
     transform: scale(1.05);
-    /* Leve aumento no botão ao passar o mouse */
 }
 
 .whatsapp-button i {
     margin: 0;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -696,23 +627,19 @@ textarea:not(:focus) {
 
     .menu-toggle {
         display: flex;
-        /* Mostra o menu-toggle em telas pequenas */
     }
 
     .nav-menu {
         display: none;
-        /* Oculta o menu-nav por padrão em telas pequenas */
     }
 
     .nav-menu.show {
         display: flex;
-        /* Mostra o menu-nav quando a classe 'show' está adicionada */
         flex-direction: column;
         width: 100%;
         background-color: #ffffff;
         position: absolute;
         top: 80px;
-        /* Posiciona o menu abaixo do cabeçalho */
         left: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         align-items: center;
@@ -822,99 +749,68 @@ textarea:not(:focus) {
     }
 }
 
-/* Estilos da Seção de Parceria */
 .parceria {
     padding: 2rem;
-    background-color: #f9f9f9;
-    /* Cor de fundo clara para destacar o conteúdo */
+    background-color: #ffffff;
     text-align: center;
     margin: 2rem 0;
-    /* Espaço acima e abaixo da seção */
+    height: 600px;
 }
 
 .parceria-container {
     max-width: 800px;
-    /* Largura máxima para manter o conteúdo centralizado e legível */
     margin: 0 auto;
-    /* Centraliza o container horizontalmente */
     padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Alinha todos os itens à esquerda */
     position: relative;
-    /* Mantém o posicionamento relativo */
+    margin-top: 5rem;
 }
 
 .parceiro-titulo {
     font-size: 2rem;
-    /* Tamanho da fonte do título */
     margin-bottom: 1rem;
-    /* Espaço abaixo do título */
     color: #333;
-    /* Cor do texto do título */
     font-weight: bold;
-    /* Título em negrito */
     text-align: left;
-    /* Alinhar o título à esquerda */
 }
 
 .parceria-topicos {
     text-align: left;
-    /* Alinhar o texto à esquerda dentro da lista */
     margin-bottom: 1.5rem;
-    /* Espaço abaixo dos tópicos */
 }
 
 .parceria-topicos ul {
     list-style-type: disc;
-    /* Adiciona marcadores padrão */
     padding-left: 2rem;
-    /* Espaço interno à esquerda da lista para os marcadores */
     margin: 0;
-    /* Remove a margem padrão */
 }
 
 .parceria-topicos ul li {
     font-size: 1.2rem;
-    /* Tamanho da fonte dos itens da lista */
     margin-bottom: 0.5rem;
-    /* Espaço abaixo de cada item da lista */
     color: #555;
-    /* Cor do texto dos itens da lista */
     line-height: 1.5;
-    /* Altura da linha para melhor legibilidade */
 }
 
 .parceria-botao {
     margin-top: 1rem;
-    /* Espaço acima do botão */
     align-self: flex-end;
-    /* Alinha o botão à direita */
 }
 
 .botao-parceria {
     display: inline-block;
-    /* Faz o botão se ajustar ao conteúdo */
     background-color: #70c07c;
-    /* Cor de fundo do botão */
     color: #fff;
-    /* Cor do texto do botão */
     padding: 0.75rem 1.5rem;
-    /* Espaçamento interno do botão */
     border-radius: 25px;
-    /* Cantos arredondados */
     text-decoration: none;
-    /* Remove o sublinhado do link */
     font-weight: bold;
-    /* Texto em negrito */
     transition: background-color 0.3s, transform 0.3s;
-    /* Transição suave para cor e transformação */
 }
 
 .botao-parceria:hover {
     background-color: #5fb479;
-    /* Cor de fundo ao passar o mouse */
     transform: scale(1.05);
-    /* Leve aumento no botão ao passar o mouse */
 }

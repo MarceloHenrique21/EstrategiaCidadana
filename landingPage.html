@@ -4,9 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Descrição do seu site ou página aqui">
+        <meta name="description"
+            content="A Estratégia Cidadania é especializada em auxiliar na concessão da cidadania italiana, portuguesa e espanhola. Oferecemos um serviço completo e personalizado, cuidando de todo o processo de documentação para que você consiga ter acesso a seu sonho!">
         <meta name="keywords"
-            content="palavra-chave1, palavra-chave2, palavra-chave3">
+            content="Cidadania, estratégia, passaporte">
         <title>Estratégia Cidadania</title>
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet"
@@ -21,8 +22,11 @@
 
         <header role="banner">
             <div class="logo">
-                <img src="/imagens/LogoInicialEstrategiaCidadania.png"
-                    alt="Logo da Estratégia Cidadania">
+                <a href="https://www.instagram.com/estrategia_cidadania/"
+                    aria-label="Instagram da Estratégia Cidadania"> <img
+                        src="/imagens/LogoInicialEstrategiaCidadania.png"
+                        alt="Logo da Estratégia Cidadania">
+                </a>
             </div>
             <nav role="navigation">
                 <ul class="nav-menu">
@@ -200,7 +204,7 @@
                     alt="Foto do Colaborador Givanildo">
                 <h4>Givanildo</h4>
                 <p>(44) 9-9898-6826</p>
-                <a href="https://wa.me/telefone4" class="whatsapp-icon"
+                <a href="https://wa.me/message/EROS3YKVBT5LO1" class="whatsapp-icon"
                     target="_blank" aria-label="Chat com Givanildo"
                     title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
@@ -256,13 +260,12 @@
 
         <section id="parceria" class="parceria">
             <div class="parceria-container">
-                <h2 class="parceiro-titulo">Título Título Título Título</h2>
+                <h2 class="parceiro-titulo">Motivos de parceria</h2>
                 <div class="parceria-topicos">
                     <ul>
-                        <li>Parceria Parceria Parceria Parceria</li>
-                        <li>Parceria Parceria Parceria Parceria</li>
-                        <li>Parceria Parceria Parceria Parceria</li>
-                        <li>Parceria Parceria Parceria Parceria</li>
+                        <li>Referência de clientes</li>
+                        <li>⁠indicações</li>
+                      
                     </ul>
                 </div>
                 <div class="parceria-botao">
@@ -277,17 +280,17 @@
             <div class="contato-container">
                 <form class="formulario" aria-labelledby="form-titulo">
                     <h2 id="form-titulo">Entre em Contato</h2>
-                    <input type="text" id="nome" name="nome"
-                        placeholder="Nome Completo" required
-                        aria-required="true">
-                    <input type="email" id="email" name="email"
-                        placeholder="Seu Email" required aria-required="true">
-                    <input type="tel" id="telefone" name="telefone"
-                        placeholder="Seu Telefone" required
-                        aria-required="true">
-                    <textarea id="duvida" name="duvida"
-                        placeholder="Descreva sua dúvida" required
-                        aria-required="true"></textarea>
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required aria-required="true">
+                    <input type="email" id="email" name="email" placeholder="E-mail" required aria-required="true">
+                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required aria-required="true">
+                    <textarea id="duvida" name="duvida" placeholder="Descreva o que você deseja" required aria-required="true"></textarea>
+                    
+                    <select id="assunto" name="assunto" required aria-required="true">
+                        <option value="" disabled selected>Selecione um assunto</option>
+                        <option value="Duvida">Tenho uma duvida</option>
+                        <option value="Ebook">Quero receber o ebook</option>
+                    </select>
+                    
                     <button type="submit">Enviar</button>
                 </form>
             </div>

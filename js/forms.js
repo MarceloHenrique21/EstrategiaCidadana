@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("created by https://github.com/MarceloHenrique21")
     // Inicializa o EmailJS
-    emailjs.init("OCswU2OBA_PyheVfn"); // Substitua YOUR_PUBLIC_KEY pela sua chave pública do EmailJS
+    emailjs.init("TnPBahfEveN7UqBji"); // Substitua YOUR_PUBLIC_KEY pela sua chave pública do EmailJS
 
     // Manipula o envio do formulário
     const form = document.querySelector('.partnership-form');
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         form.addEventListener('submit', function (event) {
             event.preventDefault(); // Impede o envio padrão do formulário
 
-            emailjs.sendForm('service_792hpex', 'template_ok3s91d', form)
+            emailjs.sendForm('service_ew0ts4s', 'template_rxwnpv7', form)
                 .then((response) => {
                     console.log('Success:', response);
                     alert('Sua mensagem foi enviada com sucesso!');

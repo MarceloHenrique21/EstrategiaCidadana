@@ -219,7 +219,7 @@ nav ul li a:hover {
 }
 
 .banner {
-    background-image: url('/imagens/psItalia.png');
+    background-image: url('/imagens/ImagemBannerPreta.jpg');
     background-size: cover;
     background-position: center;
     height: 900px;
@@ -245,15 +245,16 @@ nav ul li a:hover {
     }
 
     .company-name {
-
         font-size: 1rem;
         font-weight: bold;
         text-align: left;
-        color: white;
+        color: rgb(0, 0, 0);
         font-family: 'Courier New', monospace;
     }
 
     .info-card {
+        background: rgba(255, 255, 255, 0.10); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
         display: block;
         position: static;
         width: 80%;
@@ -262,13 +263,12 @@ nav ul li a:hover {
         border-radius: 100px;
         padding: 0.5rem;
         text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.10);
-        background-color: white;
         height: 160px;
         width: 160px;
-        margin-bottom: 30px;
+        margin-bottom: 70px;
+        
     }
-
+    
     .card-photo {
         width: 50px;
         height: 50px;
@@ -288,14 +288,14 @@ nav ul li a:hover {
 
     .iconBanner {
         font-size: 24px;
-        color: #38ad4a;
+        color: #0fd72d;
     }
 }
 
 /* Estilos para telas maiores */
 @media (min-width: 769px) {
     .info-card {
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.10);
         padding: 2rem;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         height: 330px;
@@ -313,21 +313,24 @@ nav ul li a:hover {
     .card-photo {
         width: 100px;
         height: 100px;
+        border-radius: 100px;
     }
 
     .info-card h3 {
         margin: 1rem 0;
         font-size: 2rem;
+        color: white;
     }
 
     .info-card p {
         margin: 1rem 0;
         font-size: 1.25rem;
+        color: white;
     }
 
     .iconBanner {
         font-size: 40px;
-        color: #38ad4a;
+        color: #4df867;
     }
 }
 
@@ -337,7 +340,7 @@ nav ul li a:hover {
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: left;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -363,17 +366,6 @@ nav ul li a:hover {
     margin: 0;
     font-size: 1.2rem;
     color: #ffffff;
-}
-
-.banner-text {
-    font-size: 1rem;
-    max-width: 500px;
-    margin: 0;
-    line-height: 1.5;
-    color: #ffffff;
-    text-align: left;
-    line-height: 60px;
-    font-family: 'Poppins', sans-serif;
 }
 
 .contato-buttom {
@@ -481,7 +473,7 @@ nav ul li a:hover {
 
 .topicos {
     padding: 10rem;
-    background-image: url('/imagens/EspanhaPaisagem.jpg');
+    background-image: url('/imagens/EspanhaPaisagemEditada.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -508,7 +500,7 @@ nav ul li a:hover {
 .topicos .topico {
     display: flex;
     align-items: center;
-    background-color: #f6e5b1;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 30px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -649,6 +641,7 @@ nav ul li a:hover {
 }
 
 .contato {
+    position: relative; 
     padding: 2rem;
     background-image: url('/imagens/fotoPassaporte.jpg');
     background-size: cover;
@@ -656,6 +649,23 @@ nav ul li a:hover {
     width: 100%;
     height: 700px;
     color: #fff;
+}
+
+.contato::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    pointer-events: none; 
+}
+
+.contato > * {
+    position: relative;
+    z-index: 2;
 }
 
 .contato h2 {
@@ -674,33 +684,35 @@ nav ul li a:hover {
 .formulario {
     flex: 1;
     max-width: 700px;
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.30); 
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     margin-top: 2rem;
-    margin-top: 100px;
 }
 
 .contato input,
-.contato textarea {
+.contato textarea,
+.contato select {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     background-color: #fff;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease; 
 }
 
 .contato input:focus,
-.contato textarea:focus {
-    border-color: #ff0000;
+.contato textarea:focus,
+.contato select:focus {
+    border-color: #ff0000; 
     outline: none;
 }
 
 .contato input:not(:focus),
-.contato textarea:not(:focus) {
+.contato textarea:not(:focus),
+.contato select:not(:focus) {
     border-color: #000000;
 }
 
@@ -710,43 +722,30 @@ nav ul li a:hover {
 }
 
 .contato button {
-    background-color: #F2B700;
-    color: #ffffff;
+    background-color: #F2B700; 
+    color: #ffffff; 
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .contato button:hover {
-    background-color: #000000;
-    transform: scale(1.05);
+    background-color: #000000; 
+    transform: scale(1.05); 
 }
 
-.informacoes-loja {
-    color: rgb(0, 0, 0);
+.contato select {
+    appearance: none; 
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 6"%3E%3Cpath d="M5 5L0 0h10L5 5z" fill="%23000" /%3E%3C/svg%3E'); /* Adiciona ícone de seta para baixo */
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5em auto;
 }
 
-.informacoes-loja h3 {
-    margin-bottom: 1rem;
-}
 
-.info-item {
-    display: flex;
-    align-items: left;
-    color: #000000;
-    padding: 0px;
-}
-
-.info-item i {
-    font-size: 1.5rem;
-    margin-right: 0.75rem;
-}
-
-.info-item p {
-    margin: 0;
-    font-size: 1rem;
-}
 
 footer {
     color: #000000;

@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 templateID = 'template_rxwnpv7'; // ID do template para dúvidas
                 console.log("opcao duvida foi selecionada")
             } else if (subject === 'Ebook') {
-                templateID = 'template_ebook'; //ID do template para o ebook
+                templateID = 'template_3evpxt6'; //ID do template para o ebook
                 console.log("opcao ebook foi selecionada")
             } else {
                 alert('Por favor, selecione um assunto válido.');

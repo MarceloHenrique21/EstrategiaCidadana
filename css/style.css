@@ -1002,7 +1002,7 @@ textarea:not(:focus) {
 .botao-parceria {
     display: inline-block;
     background-color: #F2B700;
-    color: #ffffff;
+    color: #000000;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     text-decoration: none;

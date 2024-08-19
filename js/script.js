@@ -1,24 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("created by https://github.com/MarceloHenrique21")
+    console.log("created by https://github.com/MarceloHenrique21");
+
     // Inicializa o EmailJS
-    emailjs.init("TnPBahfEveN7UqBji"); // Substitua YOUR_PUBLIC_KEY pela sua chave pública do EmailJS
+    emailjs.init("TnPBahfEveN7UqBji"); // Substitua pela sua chave pública do EmailJS
 
     const banner = document.querySelector('.banner');
-    const bannerHeight = banner ? banner.offsetHeight : 0; // Verifica se o banner existe e obtém a sua altura
-
+    const bannerHeight = banner ? banner.offsetHeight : 0;
     // Manipula a borda
     document.querySelectorAll('input, textarea').forEach(element => {
         element.addEventListener('focus', function () {
-            this.style.borderColor = 'transparent'; // Remove a cor da borda ao focar
+            this.style.borderColor = 'transparent';
         });
         element.addEventListener('blur', function () {
-            this.style.borderColor = 'black'; // Restaura a cor da borda ao desfocar
+            this.style.borderColor = 'black';
         });
     });
 
-    // Manipula o menu "hamburger"
+
     const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu'); // Corrigido para .nav-menu
+    const navMenu = document.querySelector('.nav-menu');
 
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', function () {
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Manipula a visibilidade da seção .topicos
     const topicos = document.querySelector('.topicos');
 
     function checkVisibility() {
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Verifica a visibilidade inicialmente e ao rolar a página
     checkVisibility();
     window.addEventListener('scroll', checkVisibility);
 
@@ -52,13 +50,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (form) {
         form.addEventListener('submit', function (event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault();
 
-            emailjs.sendForm('service_ew0ts4s', 'template_rxwnpv7', form)
+            const subject = form.querySelector('#assunto').value;
+
+            // Define o ID do template com base na seleção
+            let templateID = '';
+            if (subject === 'Duvida') {
+                templateID = 'template_rxwnpv7'; // ID do template para dúvidas
+                console.log("opcao duvida foi selecionada")
+            } else if (subject === 'Ebook') {
+                templateID = 'template_ebook'; //ID do template para o ebook
+                console.log("opcao ebook foi selecionada")
+            } else {
+                alert('Por favor, selecione um assunto válido.');
+                return;
+            }
+
+            emailjs.sendForm('service_ew0ts4s', templateID, form)
                 .then((response) => {
                     console.log('Success:', response);
-                    alert('Sua mensagem foi enviada com sucesso!');
-                    form.reset(); // Limpa o formulário após envio
+                    console.log("forms enviado!")
+                    form.reset(); 
                 })
                 .catch((error) => {
                     console.error('Error:', error);

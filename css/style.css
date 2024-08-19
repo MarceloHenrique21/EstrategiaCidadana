@@ -308,14 +308,14 @@ nav ul li a:hover {
         transform: translateY(-50%);
         border-radius: 50px;
         transition: background-color 0.3s, transform 0.3s;
-        transform-origin: center center; 
+        transform-origin: center center;
     }
-    
+
     .info-card:hover {
         background-color: #012a02;
-        transform: scale(1.05) translateY(-50%); 
+        transform: scale(1.05) translateY(-50%);
     }
-    
+
     .card-photo {
         width: 200px;
         height: 250px;
@@ -514,7 +514,11 @@ nav ul li a:hover {
     box-sizing: border-box;
     margin: 0 0 1rem 0;
     transition: width 0.3s ease;
+}
 
+.topicos .topico:hover{
+    background-color: #d4edd4;
+    transform: scale(1.05) translateY(-1%);
 }
 
 .topicos .topico i {
@@ -574,6 +578,12 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+    transform-origin: center center;
+}
+
+.colaboradores .colaborador:hover {
+    background-color: #95e4a4;
+    transform: scale(1.05) translateY(-1%);
 }
 
 .colaboradores .colaborador img {

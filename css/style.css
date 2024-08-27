@@ -451,7 +451,13 @@ nav ul li a:hover {
 }
 
 .sobre-nos h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.sobre-nos h1 {
+    font-size: 3.8rem;
     margin-bottom: 1rem;
     color: black;
 }
@@ -516,7 +522,7 @@ nav ul li a:hover {
     transition: width 0.3s ease;
 }
 
-.topicos .topico:hover{
+.topicos .topico:hover {
     background-color: #d4edd4;
     transform: scale(1.05) translateY(-1%);
 }
@@ -971,7 +977,7 @@ textarea:not(:focus) {
     background-color: #ffffff;
     text-align: center;
     margin: 2rem 0;
-    height: 600px;
+    height: 710px;
 }
 
 .parceria-container {

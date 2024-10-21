@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('/imagens/youtube.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.container {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+.partnership-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.partnership-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.partnership-form input,
+.partnership-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.partnership-form button {
+    background-color: #d54040;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100px;
+    font-family: 'Courier New', monospace;
+   
+}
+
+.partnership-form button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .partnership-form {
+        flex-direction: column;
+    }
+}

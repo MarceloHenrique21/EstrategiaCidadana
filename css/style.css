@@ -114,9 +114,7 @@ nav ul li a:hover {
 /* Media Queries para telas menores */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        min-height: 80px;
-        padding: 1rem;
+        display: none;
     }
 
     .logo {
@@ -125,10 +123,7 @@ nav ul li a:hover {
 
     .nav-menu {
         display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
+        
     }
 
     .menu-toggle {
@@ -265,7 +260,7 @@ nav ul li a:hover {
         text-align: center;
         height: 160px;
         width: 160px;
-        margin-bottom: 70px;
+        margin-bottom: 25px;
 
     }
 
